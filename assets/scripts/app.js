@@ -7,3 +7,12 @@ const backDropFunction = () => {
 	backDrop.classList.toggle('visible');
 };
 
+startAddMovieBtn.addEventListener('click', () => {
+	addMovieBtn.classList.toggle('visible');
+	backDropFunction();
+});
+
+btnCancel.addEventListener('click', () => {
+	backdrop.classList.toggle('visible');
+	addMovieBtn.classList.toggle('visible');
+});
