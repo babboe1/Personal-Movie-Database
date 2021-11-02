@@ -3,16 +3,27 @@ const addMovieBtn = document.getElementById('add-modal');
 const backDrop = document.getElementById('backdrop');
 const btnCancel = document.querySelector('.btn--passive');
 
-const backDropToggle = () => {
+const backDropClickHandler = () => {
 	backdrop.classList.toggle('visible');
 };
 
-startAddMovieBtn.addEventListener('click', () => {
+const addMovieToggle = () => {
 	addMovieBtn.classList.toggle('visible');
-	backDropToggle();
+};
+
+startAddMovieBtn.addEventListener('click', () => {
+	addMovieToggle();
+	backDropClickHandler();
 });
 
-btnCancel.addEventListener('click', () => {
-	addMovieBtn.classList.toggle('visible');
-	backDropToggle();
-});
+const CANCEL_EVENT = () => {
+	btnCancel.addEventListener('click', () => {
+		addMovieBtn.classList.toggle('visible');
+		backDropClickHandler();
+	});
+	backDrop.addEventListener('click', () => {
+		backDropClickHandler();
+		addMovieToggle();
+	});
+};
+CANCEL_EVENT();
