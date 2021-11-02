@@ -4,8 +4,9 @@ const backDrop = document.getElementById('backdrop');
 const btnCancel = addMovieBtn.querySelector('.btn--passive');
 const btnAdd = addMovieBtn.querySelector('.btn--success');
 const userInput = addMovieBtn.querySelectorAll('input');
+const inputValue = [];
 
-const backDropClickHandler = () => {
+const backDropToggle = () => {
 	backdrop.classList.toggle('visible');
 };
 const addMovieToggle = () => {
@@ -13,21 +14,22 @@ const addMovieToggle = () => {
 };
 const startAddMovieBtnHandler = () => {
 	addMovieToggle();
-	backDropClickHandler();
+	backDropToggle();
 };
 const btnCancelHandler = () => {
 	addMovieToggle();
-	backDropClickHandler();
+	backDropToggle();
 };
 const backDropHandler = () => {
-	backDropClickHandler();
+	backDropToggle();
 	addMovieToggle();
 };
+
 const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
 	const imageUrl = userInput[1].value;
 	const userRating = userInput[2].value;
-   if (
+	if (
 		movieTitle.trim() === '' ||
 		imageUrl.trim() === '' ||
 		+userRating < 0 ||
