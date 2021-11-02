@@ -8,23 +8,20 @@ const userInput = addMovieBtn.querySelectorAll('input');
 const backDropClickHandler = () => {
 	backdrop.classList.toggle('visible');
 };
-
 const addMovieToggle = () => {
 	addMovieBtn.classList.toggle('visible');
 };
 const startAddMovieBtnHandler = () => {
 	addMovieToggle();
 	backDropClickHandler();
-});
-
-const CANCEL_EVENT = () => {
-	btnCancel.addEventListener('click', () => {
-		addMovieToggle();
-		backDropClickHandler();
-	});
-	backDrop.addEventListener('click', () => {
-		backDropClickHandler();
-		addMovieToggle();
+};
+const btnCancelHandler = () => {
+	addMovieToggle();
+	backDropClickHandler();
+};
+const backDropHandler = () => {
+	backDropClickHandler();
+	addMovieToggle();
 };
 const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
