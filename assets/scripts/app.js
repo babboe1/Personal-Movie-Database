@@ -1,7 +1,9 @@
 const startAddMovieBtn = document.querySelector('header button');
 const addMovieBtn = document.getElementById('add-modal');
 const backDrop = document.getElementById('backdrop');
-const btnCancel = document.querySelector('.btn--passive');
+const btnCancel = addMovieBtn.querySelector('.btn--passive');
+const btnAdd = addMovieBtn.querySelector('.btn--success');
+const userInput = addMovieBtn.querySelectorAll('input');
 
 const backDropClickHandler = () => {
 	backdrop.classList.toggle('visible');
