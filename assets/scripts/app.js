@@ -18,7 +18,7 @@ startAddMovieBtn.addEventListener('click', () => {
 
 const CANCEL_EVENT = () => {
 	btnCancel.addEventListener('click', () => {
-		addMovieBtn.classList.toggle('visible');
+		addMovieToggle();
 		backDropClickHandler();
 	});
 	backDrop.addEventListener('click', () => {
