@@ -12,8 +12,7 @@ const backDropClickHandler = () => {
 const addMovieToggle = () => {
 	addMovieBtn.classList.toggle('visible');
 };
-
-startAddMovieBtn.addEventListener('click', () => {
+const startAddMovieBtnHandler = () => {
 	addMovieToggle();
 	backDropClickHandler();
 });
@@ -26,7 +25,20 @@ const CANCEL_EVENT = () => {
 	backDrop.addEventListener('click', () => {
 		backDropClickHandler();
 		addMovieToggle();
-	});
+};
+const btnAddHandler = () => {
+	const movieTitle = userInput[0].value;
+	const imageUrl = userInput[1].value;
+	const userRating = userInput[2].value;
+   if (
+		movieTitle === '' ||
+		imageUrl === '' ||
+		+userRating < 0 ||
+		+userRating > 5
+	) {
+		alert('you have inputted the wrong values');
+	}
+   return;
 };
 
 startAddMovieBtn.addEventListener('click', startAddMovieBtnHandler);
