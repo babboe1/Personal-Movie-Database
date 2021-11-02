@@ -28,8 +28,8 @@ const btnAddHandler = () => {
 	const imageUrl = userInput[1].value;
 	const userRating = userInput[2].value;
    if (
-		movieTitle === '' ||
-		imageUrl === '' ||
+		movieTitle.trim() === '' ||
+		imageUrl.trim() === '' ||
 		+userRating < 0 ||
 		+userRating > 5
 	) {
