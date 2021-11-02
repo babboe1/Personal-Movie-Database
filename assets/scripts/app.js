@@ -35,7 +35,21 @@ const btnAddHandler = () => {
 	) {
 		alert('you have inputted the wrong values');
 	}
-   return;
+	const getInputValue = {
+		title: movieTitle,
+		imageUrl: imageUrl,
+		rating: userRating,
+	};
+	inputValue.push(getInputValue);
+	const clearInput = () => {
+		for (const ursInput of inputValue) {
+			ursInput.value = '';
+		}
+	};
+	console.log(inputValue);
+	backDropToggle();
+	addMovieToggle();
+	clearInput();
 };
 
 startAddMovieBtn.addEventListener('click', startAddMovieBtnHandler);
