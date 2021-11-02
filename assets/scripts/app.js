@@ -26,4 +26,8 @@ const CANCEL_EVENT = () => {
 		addMovieToggle();
 	});
 };
-CANCEL_EVENT();
+
+startAddMovieBtn.addEventListener('click', startAddMovieBtnHandler);
+btnCancel.addEventListener('click', btnCancelHandler);
+backDrop.addEventListener('click', backDropHandler);
+btnAdd.addEventListener('click', btnAddHandler);
