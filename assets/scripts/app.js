@@ -48,11 +48,6 @@ const btnAddHandler = () => {
 		rating: userRating,
 	};
 	inputValue.push(getInputValue);
-	const clearInput = () => {
-		for (const ursInput of inputValue) {
-			ursInput.value = '';
-		}
-	};
 	console.log(inputValue);
 	backDropToggle();
 	addMovieToggle();
