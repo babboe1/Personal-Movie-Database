@@ -24,6 +24,11 @@ const backDropHandler = () => {
 	backDropToggle();
 	addMovieToggle();
 };
+const clearInput = () => {
+	for (const ursInput of userInput) {
+		ursInput.value = '';
+	}
+};
 
 const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
