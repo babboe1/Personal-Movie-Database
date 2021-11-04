@@ -29,6 +29,13 @@ const clearInput = () => {
 		ursInput.value = '';
 	}
 };
+const updateUI = () => {
+	if (inputValue.length === 0) {
+		entryTextSection.style.display = 'block';
+	} else {
+		entryTextSection.style.display = 'none';
+	}
+};
 
 const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
@@ -52,6 +59,7 @@ const btnAddHandler = () => {
 	backDropToggle();
 	addMovieToggle();
 	clearInput();
+	updateUI();
 };
 
 startAddMovieBtn.addEventListener('click', startAddMovieBtnHandler);
