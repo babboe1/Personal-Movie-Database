@@ -2,8 +2,9 @@ const startAddMovieBtn = document.querySelector('header button');
 const addMovieBtn = document.getElementById('add-modal');
 const backDrop = document.getElementById('backdrop');
 const btnCancel = addMovieBtn.querySelector('.btn--passive');
-const btnAdd = addMovieBtn.querySelector('.btn--success');
+const btnAdd = btnCancel.nextElementSibling;
 const userInput = addMovieBtn.querySelectorAll('input');
+const entryTextSection = document.getElementById('entry-text');
 const inputValue = [];
 
 const backDropToggle = () => {
@@ -11,6 +12,7 @@ const backDropToggle = () => {
 };
 const addMovieToggle = () => {
 	addMovieBtn.classList.toggle('visible');
+	backDropToggle();
 };
 const startAddMovieBtnHandler = () => {
 	addMovieToggle();
@@ -18,7 +20,7 @@ const startAddMovieBtnHandler = () => {
 };
 const btnCancelHandler = () => {
 	addMovieToggle();
-	backDropToggle();
+	clearInput();
 };
 const backDropHandler = () => {
 	backDropToggle();
