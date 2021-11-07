@@ -38,7 +38,21 @@ const updateUI = () => {
 		entryTextSection.style.display = 'none';
 	}
 };
-
+const newMovieElement = (title, image, rating) => {
+	const newElement = document.createElement('li');
+	newElement.className = 'movie-element';
+	newElement.innerHTML = `
+      <div class="movie-element__image">
+         <img src="${image}" alt="${title}"/>
+      </div>
+      <div class="movie-element__info">
+         <h2>${title}</h2>
+         <p>${rating}/5 stars</p>
+      </div>
+      `;
+	const movieList = document.getElementById('movie-list');
+	movieList.append(newElement);
+};
 const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
 	const imageUrl = userInput[1].value;
