@@ -16,14 +16,12 @@ const addMovieToggle = () => {
 };
 const startAddMovieBtnHandler = () => {
 	addMovieToggle();
-	backDropToggle();
 };
 const btnCancelHandler = () => {
 	addMovieToggle();
 	clearInput();
 };
 const backDropHandler = () => {
-	backDropToggle();
 	addMovieToggle();
 };
 const clearInput = () => {
@@ -75,7 +73,6 @@ const btnAddHandler = () => {
 
 	inputValue.push(getInputValue);
 	console.log(inputValue);
-	backDropToggle();
 	addMovieToggle();
 	clearInput();
 	newMovieElement(
