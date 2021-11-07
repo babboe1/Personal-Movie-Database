@@ -60,16 +60,19 @@ const btnAddHandler = () => {
 	if (
 		movieTitle.trim() === '' ||
 		imageUrl.trim() === '' ||
+		userRating.trim() === '' ||
 		+userRating < 0 ||
 		+userRating > 5
 	) {
 		alert('you have inputted the wrong values');
+		return;
 	}
 	const getInputValue = {
 		title: movieTitle,
 		imageUrl: imageUrl,
 		rating: userRating,
 	};
+
 	inputValue.push(getInputValue);
 	console.log(inputValue);
 	backDropToggle();
