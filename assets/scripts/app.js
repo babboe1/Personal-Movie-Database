@@ -78,6 +78,11 @@ const btnAddHandler = () => {
 	backDropToggle();
 	addMovieToggle();
 	clearInput();
+	newMovieElement(
+		getInputValue.title,
+		getInputValue.imageUrl,
+		getInputValue.rating
+	);
 	updateUI();
 };
 
