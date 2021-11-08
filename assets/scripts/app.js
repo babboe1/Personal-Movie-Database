@@ -5,6 +5,8 @@ const btnCancel = addMovieBtn.querySelector('.btn--passive');
 const btnAdd = btnCancel.nextElementSibling;
 const userInput = addMovieBtn.querySelectorAll('input');
 const entryTextSection = document.getElementById('entry-text');
+const movieList = document.getElementById('movie-list');
+
 const inputValue = [];
 
 const backDropToggle = () => {
