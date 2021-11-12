@@ -63,7 +63,7 @@ const deleteMovie = (movieId) => {
 		movieIndex++;
 	}
 	inputValue.splice(movieIndex, 1);
-   movieList.removeChild(movieList.children[movieIndex]);
+	movieList.removeChild(movieList.children[movieIndex]);
 };
 const newMovieElement = (id, title, image, rating) => {
 	const newElement = document.createElement('li');
@@ -77,8 +77,8 @@ const newMovieElement = (id, title, image, rating) => {
          <p>${rating}/5 stars</p>
       </div>
       `;
-	newElement.addEventListener('click', deleteMovieHandler.bind(null, id));
 	movieList.append(newElement);
+	newElement.addEventListener('click', deleteMovieHandler.bind(null, id));
 };
 const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
@@ -109,13 +109,13 @@ const btnAddHandler = () => {
 		getInputValue.id,
 		getInputValue.title,
 		getInputValue.imageUrl,
-		getInputValue.rating
+		getInputValue.rating,
 	);
 	updateUI();
 };
 
 startAddMovieBtn.addEventListener('click', startAddMovieBtnHandler);
 btnCancel.addEventListener('click', btnCancelHandler);
-cancelDeleteBtn.addEventListener('click', btnCancelHandler);
+actor:cancelDeleteBtn.addEventListener('click', btnCancelHandler);
 backDrop.addEventListener('click', backDropHandler);
 btnAdd.addEventListener('click', btnAddHandler);
