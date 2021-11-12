@@ -31,6 +31,9 @@ const btnCancelHandler = () => {
 	clearInput();
 };
 const backDropHandler = () => {
+	if (deleteMovieModal.click) {
+		addMovieBtn.style.display = 'none';
+	} else {
 	addMovieToggle();
 };
 const clearInput = () => {
