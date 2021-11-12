@@ -27,6 +27,7 @@ const btnCancelHandler = () => {
          backDropToggle();
 		} else {
 	addMovieToggle();
+		}
 	clearInput();
 };
 const backDropHandler = () => {
