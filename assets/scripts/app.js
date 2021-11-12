@@ -60,7 +60,7 @@ const deleteMovie = (movieId) => {
 		if (movie.id === movieId) {
 			break;
 		}
-		movieIndex ++;
+		movieIndex++;
 	}
 	inputValue.splice(movieIndex, 1);
    movieList.removeChild(movieList.children[movieIndex]);
