@@ -46,6 +46,11 @@ const updateUI = () => {
 	}
 };
 const deleteMovieHandler = (movieId) => {
+	deleteMovieModal.classList.add('visible');
+	backdrop.classList.toggle('visible');
+	deleteMovie(movieId);
+};
+const deleteMovie = (movieId) => {
 	let movieIndex = 0;
 	for (const movie of inputValue) {
 		if (movie.id === movieId) {
