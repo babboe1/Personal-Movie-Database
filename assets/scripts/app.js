@@ -26,7 +26,7 @@ const btnCancelHandler = () => {
          deleteMovieModal.classList.remove('visible');
          backDropToggle();
 		} else {
-	addMovieToggle();
+			addMovieToggle();
 		}
 	clearInput();
 };
@@ -34,7 +34,8 @@ const backDropHandler = () => {
 	if (deleteMovieModal.click) {
 		addMovieBtn.style.display = 'none';
 	} else {
-	addMovieToggle();
+		addMovieToggle();
+	}
 };
 const clearInput = () => {
 	for (const ursInput of userInput) {
