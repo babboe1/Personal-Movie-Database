@@ -116,5 +116,6 @@ const btnAddHandler = () => {
 
 startAddMovieBtn.addEventListener('click', startAddMovieBtnHandler);
 btnCancel.addEventListener('click', btnCancelHandler);
+cancelDeleteBtn.addEventListener('click', btnCancelHandler);
 backDrop.addEventListener('click', backDropHandler);
 btnAdd.addEventListener('click', btnAddHandler);
