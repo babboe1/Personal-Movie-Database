@@ -21,6 +21,11 @@ const startAddMovieBtnHandler = () => {
 	addMovieToggle();
 };
 const btnCancelHandler = () => {
+		if (deleteMovieModal.click) {
+         addMovieBtn.style.display = 'none';
+         deleteMovieModal.classList.remove('visible');
+         backDropToggle();
+		} else {
 	addMovieToggle();
 	clearInput();
 };
