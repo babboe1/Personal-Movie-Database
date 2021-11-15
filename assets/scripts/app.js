@@ -10,6 +10,13 @@ const deleteMovieModal = document.getElementById('delete-modal');
 const cancelDeleteBtn = deleteMovieModal.querySelector('.btn--passive');
 const inputValue = [];
 
+const validateUrl = (value) => {
+   if (!/^((https?):\/\/)?([w|W]{3}\.)+[a-zA-Z0-9\-\.]{3,}\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/.test(value)) {
+   alert("Enter valid url");
+      return;
+   }
+}
+
 const backDropToggle = () => {
 	backDrop.classList.toggle('visible');
 };
@@ -22,8 +29,9 @@ const startAddMovieBtnHandler = () => {
 };
 const btnCancelHandler = () => {
 		if (deleteMovieModal.click) {
-         addMovieBtn.style.display = 'none';
-         deleteMovieModal.classList.remove('visible');
+		backDropToggle();
+		addMovieBtn.classList.remove('visible');
+		deleteMovieModal.classList.remove('visible');
          backDropToggle();
 		} else {
 			addMovieToggle();
