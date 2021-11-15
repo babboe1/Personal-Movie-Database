@@ -8,14 +8,8 @@ const entryTextSection = document.getElementById('entry-text');
 const movieList = document.getElementById('movie-list');
 const deleteMovieModal = document.getElementById('delete-modal');
 const cancelDeleteBtn = deleteMovieModal.querySelector('.btn--passive');
+const confirmDeleteBtn = document.querySelector('.btn--danger');
 const inputValue = [];
-
-const validateUrl = (value) => {
-   if (!/^((https?):\/\/)?([w|W]{3}\.)+[a-zA-Z0-9\-\.]{3,}\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/.test(value)) {
-   alert("Enter valid url");
-      return;
-   }
-}
 
 const backDropToggle = () => {
 	backDrop.classList.toggle('visible');
@@ -32,7 +26,6 @@ const btnCancelHandler = () => {
 		backDropToggle();
 		addMovieBtn.classList.remove('visible');
 		deleteMovieModal.classList.remove('visible');
-         backDropToggle();
 	} else {
 		addMovieToggle();
 	}
@@ -98,7 +91,7 @@ const newMovieElement = (id, title, image, rating) => {
 const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
 	const imageUrl = userInput[1].value;
-	const userRating = userInput[2].value;
+   const userRating = userInput[2].value;
    
    if (
 		!/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(
