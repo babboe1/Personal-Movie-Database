@@ -28,21 +28,23 @@ const startAddMovieBtnHandler = () => {
 	addMovieToggle();
 };
 const btnCancelHandler = () => {
-		if (deleteMovieModal.click) {
+	if (deleteMovieModal.click) {
 		backDropToggle();
 		addMovieBtn.classList.remove('visible');
 		deleteMovieModal.classList.remove('visible');
          backDropToggle();
-		} else {
-			addMovieToggle();
-		}
+	} else {
+		addMovieToggle();
+	}
 	clearInput();
 };
 const backDropHandler = () => {
 	if (deleteMovieModal.click) {
-		addMovieBtn.style.display = 'none';
+		addMovieBtn.classList.remove('visible');
+		backDrop.classList.remove('visible');
+		deleteMovieModal.classList.remove('visible');
 	} else {
-		addMovieToggle();
+		backDropToggle();
 	}
 };
 const clearInput = () => {
