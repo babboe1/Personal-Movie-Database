@@ -97,6 +97,15 @@ const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
 	const imageUrl = userInput[1].value;
 	const userRating = userInput[2].value;
+   
+   if (
+		!/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(
+			imageUrl
+		)
+	) {
+		alert('Enter valid url');
+		return;
+	}
 	if (
 		movieTitle.trim() === '' ||
 		imageUrl.trim() === '' ||
