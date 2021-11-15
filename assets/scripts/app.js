@@ -11,7 +11,7 @@ const cancelDeleteBtn = deleteMovieModal.querySelector('.btn--passive');
 const inputValue = [];
 
 const backDropToggle = () => {
-	backdrop.classList.toggle('visible');
+	backDrop.classList.toggle('visible');
 };
 const addMovieToggle = () => {
 	addMovieBtn.classList.toggle('visible');
@@ -52,7 +52,7 @@ const updateUI = () => {
 const deleteMovieHandler = (movieId) => {
 	deleteMovieModal.classList.add('visible');
 	backdrop.classList.toggle('visible');
-	deleteMovie(movieId);
+	// deleteMovie(movieId);
 };
 const deleteMovie = (movieId) => {
 	let movieIndex = 0;
@@ -116,6 +116,6 @@ const btnAddHandler = () => {
 
 startAddMovieBtn.addEventListener('click', startAddMovieBtnHandler);
 btnCancel.addEventListener('click', btnCancelHandler);
-actor:cancelDeleteBtn.addEventListener('click', btnCancelHandler);
+cancelDeleteBtn.addEventListener('click', btnCancelHandler);
 backDrop.addEventListener('click', backDropHandler);
 btnAdd.addEventListener('click', btnAddHandler);
