@@ -59,8 +59,13 @@ const updateUI = () => {
 };
 const deleteMovieHandler = (movieId) => {
 	deleteMovieModal.classList.add('visible');
-	backdrop.classList.toggle('visible');
-	// deleteMovie(movieId);
+	backDrop.classList.toggle('visible');
+	confirmDeleteBtn.onclick = () => {
+		deleteMovie(movieId);
+		deleteMovieModal.classList.remove('visible');
+      backDrop.classList.toggle('visible');
+      updateUI();
+	};
 };
 const deleteMovie = (movieId) => {
 	let movieIndex = 0;
