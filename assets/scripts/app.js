@@ -46,7 +46,8 @@ const clearInput = () => {
 	}
 };
 const updateUI = () => {
-	if (inputValue.length === 0) {
+	const data = JSON.parse(localStorage.data);
+	if (data.length === 0) {
 		entryTextSection.style.display = 'block';
 	} else {
 		entryTextSection.style.display = 'none';
@@ -65,12 +66,15 @@ const deleteMovieHandler = (movieId) => {
 const deleteMovie = (movieId) => {
 	let movieIndex = 0;
 	for (const movie of inputValue) {
-		if (movie.id === movieId) {
+	let data = JSON.parse(localStorage.data);
+	for (const movie of data) {
 			break;
 		}
 		movieIndex++;
 	}
-	inputValue.splice(movieIndex, 1);
+	data.splice(movieIndex, 1);
+	localStorage.setItem('data', JSON.stringify(data));
+	localStorage.setItem('data', JSON.stringify(data));
 	movieList.removeChild(movieList.children[movieIndex]);
 };
 const newMovieElement = () => {
@@ -90,7 +94,7 @@ const newMovieElement = () => {
 		movieList.append(newElement);
 		newElement.addEventListener(
 			'click',
-			deleteMovieHandler.bind(null, item.id),
+			deleteMovieHandler.bind(null, item.id)
 		);
 	});
 };
