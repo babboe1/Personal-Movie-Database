@@ -128,12 +128,30 @@ const btnAddHandler = () => {
 	console.log(inputValue);
 	addMovieToggle();
 	clearInput();
-	newMovieElement(
-		getInputValue.id,
-		getInputValue.title,
-		getInputValue.imageUrl,
-		getInputValue.rating,
-	);
+	newMovieElement();
+	updateUI();
+};
+
+window.onload = () => {
+	updateUI();
+	const data = JSON.parse(localStorage.data);
+	data.map((item) => {
+		const newElement = document.createElement('li');
+		newElement.className = 'movie-element';
+		newElement.innerHTML = `
+         <div class="movie-element__image">
+            <img src="${item.imageUrl}" alt="${item.title}"/>
+         </div>
+         <div class="movie-element__info">
+            <h2>${item.title}</h2>
+            <p>${item.rating}/5 stars</p>
+         </div>
+         `;
+		movieList.append(newElement);
+		newElement.addEventListener(
+			'click',
+			deleteMovieHandler.bind(null, item.id),
+		);
 	updateUI();
 };
 
