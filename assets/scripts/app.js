@@ -59,21 +59,20 @@ const deleteMovieHandler = (movieId) => {
 	confirmDeleteBtn.onclick = () => {
 		deleteMovie(movieId);
 		deleteMovieModal.classList.remove('visible');
-      backDrop.classList.toggle('visible');
-      updateUI();
+		backDrop.classList.toggle('visible');
+		updateUI();
 	};
 };
 const deleteMovie = (movieId) => {
 	let movieIndex = 0;
-	for (const movie of inputValue) {
 	let data = JSON.parse(localStorage.data);
 	for (const movie of data) {
+		if (movie.id === movieId) {
 			break;
 		}
 		movieIndex++;
 	}
 	data.splice(movieIndex, 1);
-	localStorage.setItem('data', JSON.stringify(data));
 	localStorage.setItem('data', JSON.stringify(data));
 	movieList.removeChild(movieList.children[movieIndex]);
 };
@@ -101,9 +100,9 @@ const newMovieElement = () => {
 const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
 	const imageUrl = userInput[1].value;
-   const userRating = userInput[2].value;
-   
-   if (
+	const userRating = userInput[2].value;
+
+	if (
 		!/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(
 			imageUrl
 		)
@@ -157,7 +156,7 @@ window.onload = () => {
 			'click',
 			deleteMovieHandler.bind(null, item.id),
 		);
-	updateUI();
+	});
 };
 
 startAddMovieBtn.addEventListener('click', startAddMovieBtnHandler);
