@@ -73,20 +73,26 @@ const deleteMovie = (movieId) => {
 	inputValue.splice(movieIndex, 1);
 	movieList.removeChild(movieList.children[movieIndex]);
 };
-const newMovieElement = (id, title, image, rating) => {
-	const newElement = document.createElement('li');
-	newElement.className = 'movie-element';
-	newElement.innerHTML = `
-      <div class="movie-element__image">
-         <img src="${image}" alt="${title}"/>
-      </div>
-      <div class="movie-element__info">
-         <h2>${title}</h2>
-         <p>${rating}/5 stars</p>
-      </div>
-      `;
-	movieList.append(newElement);
-	newElement.addEventListener('click', deleteMovieHandler.bind(null, id));
+const newMovieElement = () => {
+	const data = JSON.parse(localStorage.data);
+	data.map((item) => {
+		const newElement = document.createElement('li');
+		newElement.className = 'movie-element';
+		newElement.innerHTML = `
+         <div class="movie-element__image">
+            <img src="${item.imageUrl}" alt="${item.title}"/>
+         </div>
+         <div class="movie-element__info">
+            <h2>${item.title}</h2>
+            <p>${item.rating}/5 stars</p>
+         </div>
+         `;
+		movieList.append(newElement);
+		newElement.addEventListener(
+			'click',
+			deleteMovieHandler.bind(null, item.id),
+		);
+	});
 };
 const btnAddHandler = () => {
 	const movieTitle = userInput[0].value;
