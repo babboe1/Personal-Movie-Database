@@ -1,6 +1,6 @@
 Personal Movie Database
 The is a web application for storing list of personal movies which persist data to web browser local storage
-## Table of contents
+## Table of content
 
 -  [Overview](#overview)
    -  [The challenge](#the-challenge)
@@ -20,9 +20,10 @@ Users should be able to:
 -  Add movies to the list
 -  Delete movie from the list
 
-### Links
+### Links.
 
--  Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-  Live Site URL: [Personal Movie List
+](https://infallible-tereshkova-3140a4.netlify.app/)
 
 ## My process
 
