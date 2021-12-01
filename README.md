@@ -19,6 +19,7 @@ Users should be able to:
 -  See hover states for interactive elements
 -  Add movies to the list
 -  Delete movie from the list
+-  Retain user data after reload
 
 ### Links.
 
