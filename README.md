@@ -39,4 +39,4 @@ Users should be able to:
 ## Author
 
 -  Twitter - [@ausstinab](https://www.twitter.com/ausstinab)
--  LinkedIn - [Abiola Ayodele]()
+-  LinkedIn - [Abiola Ayodele](https://www.linkedin.com/in/abiola-ayodele-5a10651b7/)
