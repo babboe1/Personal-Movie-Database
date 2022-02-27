@@ -39,3 +39,4 @@ Users should be able to:
 ## Author
 
 -  Twitter - [@ausstinab](https://www.twitter.com/ausstinab)
+-  LinkedIn
