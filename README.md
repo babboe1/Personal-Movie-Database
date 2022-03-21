@@ -34,7 +34,7 @@ Users should be able to:
 -  CSS custom properties
 -  Flexbox
 -  JavaScript ES6
--  Mobile first approach
+-  Mobile first
 
 ## Author
 
