@@ -131,9 +131,13 @@ const btnAddHandler = () => {
 		rating: userRating,
 	};
 
-	// inputValue.push(getInputValue);
-	console.log(inputValue);
-	localStorage.setItem('data', JSON.stringify([...inputValue, getInputValue]));
+	const movieDB =
+		localStorage.getItem('data') !== null
+			? JSON.parse(localStorage.getItem('data'))
+			: [];
+	movieDB.push(getInputValue);
+	addToMovieList(getInputValue);
+	localStorage.setItem('data', JSON.stringify(movieDB));
 	addMovieToggle();
 	clearInput();
 	updateUI();
