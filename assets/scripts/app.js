@@ -66,6 +66,24 @@ const updateUI = () => {
 		entryTextSection.style.display = 'none';
 	}
 };
+
+const addToMovieList = (item) => {
+   const newElement = document.createElement('li');
+   newElement.setAttribute('id', item.id);
+	newElement.className = 'movie-element';
+	newElement.innerHTML = `
+      <div class="movie-element__image">
+         <img src="${item.imageUrl}" alt="${item.title}"/>
+      </div>
+      <div class="movie-element__info">
+         <h2>${item.title}</h2>
+         <p>${item.rating}/5 stars</p>
+      </div>
+      `;
+	movieList.append(newElement);
+	newElement.addEventListener('click', deleteMovieHandler.bind(null, item.id));
+};
+
 const deleteMovieHandler = (movieId) => {
 	deleteMovieModal.classList.add('visible');
 	backDrop.classList.toggle('visible');
