@@ -68,8 +68,8 @@ const updateUI = () => {
 };
 
 const addToMovieList = (item) => {
-   const newElement = document.createElement('li');
-   newElement.setAttribute('id', item.id);
+	const newElement = document.createElement('li');
+	newElement.setAttribute('id', item.id);
 	newElement.className = 'movie-element';
 	newElement.innerHTML = `
       <div class="movie-element__image">
