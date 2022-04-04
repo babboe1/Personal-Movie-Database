@@ -11,6 +11,17 @@ const cancelDeleteBtn = deleteMovieModal.querySelector('.btn--passive');
 const confirmDeleteBtn = document.querySelector('.btn--danger');
 const inputValue = [];
 
+const loadData = () => {
+   updateUI();
+	const data =
+		localStorage.getItem('data') !== null
+			? JSON.parse(localStorage.getItem('data'))
+			: [];
+	data?.map((item) => {
+      addToMovieList(item);
+	});
+};
+
 const backDropToggle = () => {
 	backDrop.classList.toggle('visible');
 };
