@@ -136,7 +136,6 @@ const btnAddHandler = () => {
 	localStorage.setItem('data', JSON.stringify([...inputValue, getInputValue]));
 	addMovieToggle();
 	clearInput();
-	newMovieElement();
 	updateUI();
 };
 
