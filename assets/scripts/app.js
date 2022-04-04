@@ -12,7 +12,7 @@ const confirmDeleteBtn = document.querySelector('.btn--danger');
 const inputValue = [];
 
 const loadData = () => {
-   updateUI();
+	updateUI();
 	const data =
 		localStorage.getItem('data') !== null
 			? JSON.parse(localStorage.getItem('data'))
