@@ -57,8 +57,10 @@ const clearInput = () => {
 	}
 };
 const updateUI = () => {
-	const data = JSON.parse(localStorage.data);
-	if (data.length === 0) {
+	if (
+		localStorage.getItem('data') === null ||
+		JSON.parse(localStorage.getItem('data')).length === 0
+	) {
 		entryTextSection.style.display = 'block';
 	} else {
 		entryTextSection.style.display = 'none';
