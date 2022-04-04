@@ -24,7 +24,7 @@ Users should be able to:
 ### Links.
 
 -  Live Site URL: [Personal Movie List
-](https://infallible-tereshkova-3140a4.netlify.app/)
+]()
 
 ## My process
 
