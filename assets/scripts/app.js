@@ -121,7 +121,7 @@ const btnAddHandler = () => {
 		return;
 	}
 	const getInputValue = {
-		id: Math.random().toString(),
+		id: `${movieTitle}${Math.round(Math.random())}`,
 		title: movieTitle,
 		imageUrl: imageUrl,
 		rating: userRating,
