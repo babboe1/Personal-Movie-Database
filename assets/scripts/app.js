@@ -18,7 +18,7 @@ const loadData = () => {
 			? JSON.parse(localStorage.getItem('data'))
 			: [];
 	data?.map((item) => {
-      addToMovieList(item);
+		addToMovieList(item);
 	});
 };
 
