@@ -97,15 +97,9 @@ const deleteMovieHandler = (movieId) => {
 const deleteMovie = (movieId) => {
 	let movieIndex = 0;
 	let data = JSON.parse(localStorage.data);
-	for (const movie of data) {
-		if (movie.id === movieId) {
-			break;
-		}
-		movieIndex++;
-	}
-	data.splice(movieIndex, 1);
-	localStorage.setItem('data', JSON.stringify(data));
-	movieList.removeChild(movieList.children[movieIndex]);
+   let updatedData = data.filter((movie) => movie.id !== movieId);
+   movieList.removeChild(document.getElementById(movieId));
+	localStorage.setItem('data', JSON.stringify(updatedData));
 };
 const newMovieElement = () => {
 	const data = JSON.parse(localStorage.data);
