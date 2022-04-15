@@ -27,7 +27,7 @@ Below is a preview
 
 ### Links.
 
--  Live Site URL: [Personal Movie List
+-  Live Site URL: [Personal Movie database
 ](https://personal-movie-database.netlify.app/)
 
 ## My process
