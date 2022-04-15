@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-Below 
+Below is a preview
 
 ### Links.
 
