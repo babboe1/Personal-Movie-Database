@@ -21,6 +21,8 @@ Users should be able to:
 -  Delete movie from the list
 -  Retain user data after reload
 
+### Screenshot
+
 ### Links.
 
 -  Live Site URL: [Personal Movie List
